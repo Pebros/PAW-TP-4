@@ -4,9 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
+class ComposerStaticInit1d74230c4fc313a371752c9a5b8f859a
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '5ec26a44593cffc3089bdca7ce7a56c3' => __DIR__ . '/../..' . '/core/helpers.php',
     );
@@ -19,6 +20,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
         'P' => 
         array (
@@ -42,6 +44,10 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
         'Psr\\Log\\' => 
         array (
@@ -87,7 +93,6 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'CoreTestIterator' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Extension/CoreTest.php',
         'CoreTestIteratorAggregate' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Extension/CoreTest.php',
         'CoreTestIteratorAggregateAggregate' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Extension/CoreTest.php',
-        'CorruptCache' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/EnvironmentTest.php',
         'CountableStub' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/IntegrationTest.php',
         'CustomExtensionTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/CustomExtensionTest.php',
         'FooObject' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Extension/SandboxTest.php',
@@ -126,6 +131,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Monolog\\Formatter\\TestBarNorm' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Formatter/NormalizerFormatterTest.php',
         'Monolog\\Formatter\\TestFoo' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Formatter/LineFormatterTest.php',
         'Monolog\\Formatter\\TestFooNorm' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Formatter/NormalizerFormatterTest.php',
+        'Monolog\\Formatter\\TestInfoLeak' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Formatter/NormalizerFormatterTest.php',
         'Monolog\\Formatter\\TestStreamFoo' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Formatter/NormalizerFormatterTest.php',
         'Monolog\\Formatter\\TestToStringError' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Formatter/NormalizerFormatterTest.php',
         'Monolog\\Formatter\\WildfireFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/WildfireFormatter.php',
@@ -183,6 +189,8 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Monolog\\Handler\\HipChatHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/HipChatHandler.php',
         'Monolog\\Handler\\HipChatHandlerTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Handler/HipChatHandlerTest.php',
         'Monolog\\Handler\\IFTTTHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/IFTTTHandler.php',
+        'Monolog\\Handler\\InsightOpsHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/InsightOpsHandler.php',
+        'Monolog\\Handler\\InsightOpsHandlerTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Handler/InsightOpsHandlerTest.php',
         'Monolog\\Handler\\LogEntriesHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/LogEntriesHandler.php',
         'Monolog\\Handler\\LogEntriesHandlerTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Handler/LogEntriesHandlerTest.php',
         'Monolog\\Handler\\LogglyHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/LogglyHandler.php',
@@ -261,6 +269,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Monolog\\Processor\\MercurialProcessorTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Processor/MercurialProcessorTest.php',
         'Monolog\\Processor\\ProcessIdProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/ProcessIdProcessor.php',
         'Monolog\\Processor\\ProcessIdProcessorTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Processor/ProcessIdProcessorTest.php',
+        'Monolog\\Processor\\ProcessorInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/ProcessorInterface.php',
         'Monolog\\Processor\\PsrLogMessageProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/PsrLogMessageProcessor.php',
         'Monolog\\Processor\\PsrLogMessageProcessorTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/Processor/PsrLogMessageProcessorTest.php',
         'Monolog\\Processor\\TagProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/TagProcessor.php',
@@ -272,7 +281,11 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Monolog\\PsrLogCompatTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/PsrLogCompatTest.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
         'Monolog\\RegistryTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/RegistryTest.php',
+        'Monolog\\ResettableInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ResettableInterface.php',
+        'Monolog\\SignalHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
+        'Monolog\\SignalHandlerTest' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/SignalHandlerTest.php',
         'Monolog\\TestCase' => __DIR__ . '/..' . '/monolog/monolog/tests/Monolog/TestCase.php',
+        'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
         'Psr\\Log\\AbstractLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/AbstractLogger.php',
         'Psr\\Log\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/log/Psr/Log/InvalidArgumentException.php',
         'Psr\\Log\\LogLevel' => __DIR__ . '/..' . '/psr/log/Psr/Log/LogLevel.php',
@@ -283,6 +296,9 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
+        'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
+        'SimpleIteratorForTesting' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/IntegrationTest.php',
+        'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'TestTokenParser' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/ParserTest.php',
         'ToStringStub' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/IntegrationTest.php',
@@ -334,10 +350,13 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig\\Node\\BlockReferenceNode' => __DIR__ . '/..' . '/twig/twig/src/Node/BlockReferenceNode.php',
         'Twig\\Node\\BodyNode' => __DIR__ . '/..' . '/twig/twig/src/Node/BodyNode.php',
         'Twig\\Node\\CheckSecurityNode' => __DIR__ . '/..' . '/twig/twig/src/Node/CheckSecurityNode.php',
+        'Twig\\Node\\CheckToStringNode' => __DIR__ . '/..' . '/twig/twig/src/Node/CheckToStringNode.php',
+        'Twig\\Node\\DeprecatedNode' => __DIR__ . '/..' . '/twig/twig/src/Node/DeprecatedNode.php',
         'Twig\\Node\\DoNode' => __DIR__ . '/..' . '/twig/twig/src/Node/DoNode.php',
         'Twig\\Node\\EmbedNode' => __DIR__ . '/..' . '/twig/twig/src/Node/EmbedNode.php',
         'Twig\\Node\\Expression\\AbstractExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/AbstractExpression.php',
         'Twig\\Node\\Expression\\ArrayExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/ArrayExpression.php',
+        'Twig\\Node\\Expression\\ArrowFunctionExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/ArrowFunctionExpression.php',
         'Twig\\Node\\Expression\\AssignNameExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/AssignNameExpression.php',
         'Twig\\Node\\Expression\\Binary\\AbstractBinary' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/Binary/AbstractBinary.php',
         'Twig\\Node\\Expression\\Binary\\AddBinary' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/Binary/AddBinary.php',
@@ -373,6 +392,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig\\Node\\Expression\\Filter\\DefaultFilter' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/Filter/DefaultFilter.php',
         'Twig\\Node\\Expression\\FunctionExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/FunctionExpression.php',
         'Twig\\Node\\Expression\\GetAttrExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/GetAttrExpression.php',
+        'Twig\\Node\\Expression\\InlinePrint' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/InlinePrint.php',
         'Twig\\Node\\Expression\\MethodCallExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/MethodCallExpression.php',
         'Twig\\Node\\Expression\\NameExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/NameExpression.php',
         'Twig\\Node\\Expression\\NullCoalesceExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/NullCoalesceExpression.php',
@@ -390,6 +410,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig\\Node\\Expression\\Unary\\NegUnary' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/Unary/NegUnary.php',
         'Twig\\Node\\Expression\\Unary\\NotUnary' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/Unary/NotUnary.php',
         'Twig\\Node\\Expression\\Unary\\PosUnary' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/Unary/PosUnary.php',
+        'Twig\\Node\\Expression\\VariadicExpression' => __DIR__ . '/..' . '/twig/twig/src/Node/Expression/VariadicExpression.php',
         'Twig\\Node\\FlushNode' => __DIR__ . '/..' . '/twig/twig/src/Node/FlushNode.php',
         'Twig\\Node\\ForLoopNode' => __DIR__ . '/..' . '/twig/twig/src/Node/ForLoopNode.php',
         'Twig\\Node\\ForNode' => __DIR__ . '/..' . '/twig/twig/src/Node/ForNode.php',
@@ -435,8 +456,10 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig\\Test\\NodeTestCase' => __DIR__ . '/..' . '/twig/twig/src/Test/NodeTestCase.php',
         'Twig\\Token' => __DIR__ . '/..' . '/twig/twig/src/Token.php',
         'Twig\\TokenParser\\AbstractTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/AbstractTokenParser.php',
+        'Twig\\TokenParser\\ApplyTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/ApplyTokenParser.php',
         'Twig\\TokenParser\\AutoEscapeTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/AutoEscapeTokenParser.php',
         'Twig\\TokenParser\\BlockTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/BlockTokenParser.php',
+        'Twig\\TokenParser\\DeprecatedTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/DeprecatedTokenParser.php',
         'Twig\\TokenParser\\DoTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/DoTokenParser.php',
         'Twig\\TokenParser\\EmbedTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/EmbedTokenParser.php',
         'Twig\\TokenParser\\ExtendsTokenParser' => __DIR__ . '/..' . '/twig/twig/src/TokenParser/ExtendsTokenParser.php',
@@ -510,6 +533,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig_Node_BlockReference' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/BlockReference.php',
         'Twig_Node_Body' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/Body.php',
         'Twig_Node_CheckSecurity' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/CheckSecurity.php',
+        'Twig_Node_Deprecated' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/Deprecated.php',
         'Twig_Node_Do' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/Do.php',
         'Twig_Node_Embed' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/Embed.php',
         'Twig_Node_Expression' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Node/Expression.php',
@@ -605,6 +629,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig_Source' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Source.php',
         'Twig_SourceContextLoaderInterface' => __DIR__ . '/..' . '/twig/twig/lib/Twig/SourceContextLoaderInterface.php',
         'Twig_Template' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Template.php',
+        'Twig_TemplateArrayAccess' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/TemplateTest.php',
         'Twig_TemplateArrayAccessObject' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/TemplateTest.php',
         'Twig_TemplateGetIsMethods' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/TemplateTest.php',
         'Twig_TemplateMagicMethodExceptionObject' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/TemplateTest.php',
@@ -648,11 +673,11 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig_Tests_Loader_ArrayTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Loader/ArrayTest.php',
         'Twig_Tests_Loader_ChainTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Loader/ChainTest.php',
         'Twig_Tests_Loader_FilesystemTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Loader/FilesystemTest.php',
-        'Twig_Tests_NativeExtensionTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/NativeExtensionTest.php',
         'Twig_Tests_NodeVisitor_OptimizerTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/NodeVisitor/OptimizerTest.php',
         'Twig_Tests_Node_AutoEscapeTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/AutoEscapeTest.php',
         'Twig_Tests_Node_BlockReferenceTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/BlockReferenceTest.php',
         'Twig_Tests_Node_BlockTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/BlockTest.php',
+        'Twig_Tests_Node_DeprecatedTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/DeprecatedTest.php',
         'Twig_Tests_Node_DoTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/DoTest.php',
         'Twig_Tests_Node_Expression_ArrayTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/Expression/ArrayTest.php',
         'Twig_Tests_Node_Expression_AssignNameTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/Expression/AssignNameTest.php',
@@ -687,7 +712,6 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig_Tests_Node_ModuleTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/ModuleTest.php',
         'Twig_Tests_Node_PrintTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/PrintTest.php',
         'Twig_Tests_Node_SandboxTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/SandboxTest.php',
-        'Twig_Tests_Node_SandboxedPrintTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/SandboxedPrintTest.php',
         'Twig_Tests_Node_SetTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/SetTest.php',
         'Twig_Tests_Node_SpacelessTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/SpacelessTest.php',
         'Twig_Tests_Node_TextTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Node/TextTest.php',
@@ -707,6 +731,7 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
         'Twig_TokenParserInterface' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParserInterface.php',
         'Twig_TokenParser_AutoEscape' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParser/AutoEscape.php',
         'Twig_TokenParser_Block' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParser/Block.php',
+        'Twig_TokenParser_Deprecated' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParser/Deprecated.php',
         'Twig_TokenParser_Do' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParser/Do.php',
         'Twig_TokenParser_Embed' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParser/Embed.php',
         'Twig_TokenParser_Extends' => __DIR__ . '/..' . '/twig/twig/lib/Twig/TokenParser/Extends.php',
@@ -731,10 +756,10 @@ class ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitbc11f9ed09703cea8296e5a8400f798b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1d74230c4fc313a371752c9a5b8f859a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1d74230c4fc313a371752c9a5b8f859a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit1d74230c4fc313a371752c9a5b8f859a::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit1d74230c4fc313a371752c9a5b8f859a::$classMap;
 
         }, null, ClassLoader::class);
     }
