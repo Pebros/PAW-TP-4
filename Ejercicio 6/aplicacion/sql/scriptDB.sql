@@ -1,5 +1,5 @@
-CREATE DATABASE `paw` /*!40100 DEFAULT CHARACTER SET latin1 */;
-CREATE TABLE `turnos` (
+CREATE SCHEMA `paw` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE TABLE `turnosej6` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_del_paciente` text,
   `email` text,

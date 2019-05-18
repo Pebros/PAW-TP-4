@@ -65,10 +65,10 @@ class QueryBuilder
         //uso parametro y valor para el where
         $parameters = $this->cleanParameterName($parameters);
         $sql = sprintf(
-            'update into %s (%s) set (%s) where (%s)=(%s)',
+            'update %s  set %s = %s where (%s)=(%s)',
             $table,
             implode(', ', array_keys($parameters)),
-            ':' . implode(', :', array_keys($parameters)),
+            '=' . implode(', :', array_keys($parameters)),
             $parametro,
             $valor
         );
@@ -77,7 +77,7 @@ class QueryBuilder
             $statement->execute($parameters);
         } catch (Exception $e) {
             echo $sql;
-            $this->sendToLog($e);
+            echo $e;
         }
     }
 

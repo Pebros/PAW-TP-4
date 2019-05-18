@@ -11,4 +11,4 @@ $router->post('turnos/save', 'TurnosController@save');
 $router->get('turnos/resumen', 'TurnosController@resumen');
 $router->get('turnos/delete', 'TurnosController@delete');
 $router->get('turnos/edit', 'TurnosController@edit');
-$router->get('turnos/update', 'TurnosController@update');
+$router->post('turnos/update', 'TurnosController@update');

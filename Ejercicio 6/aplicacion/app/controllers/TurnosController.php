@@ -130,7 +130,7 @@ class TurnosController extends Controller
                 'horario_del_turno' => $_POST["horario_del_turno"],
             );
             $this->model->update($turno, $parametro, $valor);
-            return redirect('turnos');
+            return $this->index();
         } else {
             echo $controles;
         }
