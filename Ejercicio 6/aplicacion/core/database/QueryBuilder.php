@@ -41,7 +41,7 @@ class QueryBuilder
      * Insert a record into a table.
      *
      * @param  string $table
-     * @param  array  $parameters
+     * @param  array $parameters
      */
     public function insert($table, $parameters)
     {
@@ -64,7 +64,23 @@ class QueryBuilder
     {
         //uso parametro y valor para el where
         $parameters = $this->cleanParameterName($parameters);
-        $sql = sprintf(
+        foreach ($parameters as $column => $value) {
+            $sql = sprintf(
+                'update %s set %s = "%s" where (%s)  = (%s)',
+            $table,
+            $column,
+            $value,
+            $parametro,
+            $valor);
+            try{
+                $statement=$this->pdo->prepare($sql);
+                $statement->execute();
+            }catch (Exception $e){
+                echo $sql;
+                echo $e;
+            }
+        }
+        /*$sql = sprintf(
             'update %s  set %s = %s where (%s)=(%s)',
             $table,
             implode(', ', array_keys($parameters)),
@@ -78,21 +94,22 @@ class QueryBuilder
         } catch (Exception $e) {
             echo $sql;
             echo $e;
-        }
+        }*/
     }
 
 
-    public function delete($table,$parametro,$valor){
+    public function delete($table, $parametro, $valor)
+    {
 
-        $sql=sprintf('delete from %s where (%s)=(%s)',
+        $sql = sprintf('delete from %s where (%s)=(%s)',
             $table,
             $parametro,
             $valor);
 
-        try{
-            $statement=$this->pdo->prepare($sql);
+        try {
+            $statement = $this->pdo->prepare($sql);
             $statement->execute();
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo $e;
         }
     }
@@ -114,7 +131,7 @@ class QueryBuilder
     {
         $cleaned_params = [];
         foreach ($parameters as $name => $value) {
-            $cleaned_params[str_replace('-', '', $name)] = $value ;
+            $cleaned_params[str_replace('-', '', $name)] = $value;
         }
         return $cleaned_params;
     }
