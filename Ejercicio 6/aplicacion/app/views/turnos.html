@@ -34,6 +34,7 @@
 			<td>{{ turno.telefono }}</td>
 			<td>{{ turno.email }}</td>
 			<td><a href="/turnos/resumen?id={{ turno.id }}">Ver</a></td>
+			<td><a href="/turnos/edit?id={{ turno.id }}">Editar</a></td>
 			<td><a href="/turnos/delete?id={{ turno.id }}">Eliminar Turno</a></td>
 		</tr>	
 		{% else %}

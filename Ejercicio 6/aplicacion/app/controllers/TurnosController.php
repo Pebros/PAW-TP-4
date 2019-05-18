@@ -50,6 +50,91 @@ class TurnosController extends Controller
         return $this->index();
     }
 
+
+    public function edit()
+    {
+        $turnos = $this->model->get();
+        foreach ($turnos as $t) {
+            if ($_GET['id'] == $t->id) {
+                $turno = $t;
+                break;
+            }
+        }
+        $today =  date("Y-m-d");
+        return view('turnos.update', compact('today','turno'));
+    }
+
+
+    public function update(){
+        echo "llego aca";
+        $parametro='id';
+        $valor=$_POST['id'];
+        $controles = [];
+
+        if (!(isset($_POST['nombre_del_paciente']) &&
+            preg_match('/^[A-Za-z]/', $_POST['nombre_del_paciente']))) {
+            $controles[] = "ERROR CAMPO: NOMBRE DEL PACIENTE";
+        }
+
+        if (!(isset($_POST['email']) &&
+            preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $_POST['email']))) {
+            $controles[] = "ERROR CAMPO: EMAIL";
+        }
+
+        if (!(isset($_POST['telefono']) &&
+            is_numeric($_POST['telefono']))) {
+            $controles[] = "ERROR CAMPO: TELEFONO";
+        }
+
+        if (!(isset($_POST['talla_de_calzado']) &&
+            is_numeric($_POST['talla_de_calzado']) &&
+            is_int((int)$_POST['talla_de_calzado']) &&
+            $this->in_range($_POST['talla_de_calzado'], 19, 46))) {
+            $controles[] = "ERROR CAMPO: TALLA DE CALZADO";
+        }
+
+
+        if (!(isset($_POST['fecha_de_nacimiento']) &&
+            $this->validar_fecha($_POST["fecha_de_nacimiento"]))) {
+            $controles[] = "ERROR CAMPO: FECHA DE NACIMIENTO";
+        }
+
+        if (!(isset($_POST['fecha_del_turno']) &&
+            $this->validar_fecha($_POST["fecha_del_turno"]))) {
+            $controles[] = "ERROR CAMPO: FECHA DEL TURNO";
+        }
+
+        if (!(isset($_POST['horario_del_turno']) &&
+            $this->hourIsBetween('08:00', '17:00', $_POST['horario_del_turno']))) {
+            $controles[] = "ERROR CAMPO: HORARIO DEL TURNO";
+        }
+
+
+        if (empty($controles)) {
+            $turnos = $this->model->get();
+            $contador = 1;
+            if (!sizeof($turnos) == 0) {
+                $contador = end($turnos)->id + 1;
+            }
+            $turno = array(
+                'nombre_del_paciente' => $_POST["nombre_del_paciente"],
+                'email' => $_POST["email"],
+                'telefono' => $_POST["telefono"],
+                'edad' => $_POST["edad"],
+                'talla_de_calzado' => $_POST["talla_de_calzado"],
+                'altura' => $_POST["altura"],
+                'fecha_de_nacimiento' => $_POST["fecha_de_nacimiento"],
+                'color_de_pelo' => $_POST["color_de_pelo"],
+                'fecha_del_turno' => $_POST["fecha_del_turno"],
+                'horario_del_turno' => $_POST["horario_del_turno"],
+            );
+            $this->model->update($turno,$parametro,$valor);
+            return redirect('turnos');
+        } else {
+            echo $controles;
+        }
+    }
+
     public function save()
     {
         $controles = [];

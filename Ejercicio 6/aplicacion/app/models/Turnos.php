@@ -22,4 +22,8 @@ class Turnos extends Model
     {
         $this->db->delete($this->table, $parametro,$valor);
     }
+
+    public function update(array $task,$parametro,$valor){
+        $this->db->update($this->table,$task,$parametro,$valor);
+    }
 }

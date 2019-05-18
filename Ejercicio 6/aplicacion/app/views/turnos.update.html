@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Editar Turno{% endblock %}
+
+{% block header %}
+{{ include('partials/nav.html') }}
+{% endblock %}
+
+{% block head %}
+{{ parent() }}
+<meta name="keywords" content="PAW,2018,Templates,PHP">
+{% endblock %}
+
+{% block main %}
+<h2>Editar Turno</h2>
+
+<form action="/turnos/update" method="POST">
+    <fieldset>
+
+        <input type="number" name="id" value="{{turno.id}}" style="display: none">
+        <label for="nombre_del_paciente"> Nombre del Paciente: </label>
+        <input type="text" name="nombre_del_paciente" value="{{turno.nombre_del_paciente}}" id="nombre_del_paciente" required="true">
+        <br>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" value="{{turno.email}}" id="email" required="true">
+        <br>
+        <br>
+        <label for="telefono">Telefono: </label>
+        <input type="number" name="telefono" id="telefono" value="{{turno.telefono}}" min="1" required="true">
+        <br>
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad" value="{{turno.edad}}" min="0">
+        <br>
+        <br>
+        <label for="talla_de_calzado">Talla de calzado: </label>
+        <input type="number" name="talla_de_calzado" id="talla_de_calzado" value="{{turno.talla_de_calzado}}" min="20" max="45">
+        <br>
+        <br>
+        <label for="altura">Altura: </label>
+        <input type="range" name="altura" value="{{turno.altura}}"  id="altura" min="0" max="3.00" step="0.01">
+        <br>
+        <br>
+        <label for="fecha_de_nacimiento">Fecha de nacimiento: </label>
+        <input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" value="{{turno.fecha_de_nacimiento}}" max="{{ today }}" required="true">
+        <br>
+        <br>
+        <label for="color_de_pelo">Color de pelo: </label>
+        <select name="color_de_pelo" id="color_de_pelo">
+            <option>{{turno.color_de_pelo}}</option>
+            <option>Claro</option>
+            <option>Oscuro</option>
+        </select>
+        <br>
+        <br>
+        <label for="fecha_del_turno">Fecha del turno: </label>
+        <input type="date" name="fecha_del_turno" value="{{turno.fecha_del_turno}}" id="fecha_del_turno"  required="true">
+        <br>
+        <br>
+        <label for="horario_del_turno">Horario del turno: </label>
+        <input type="time" name="horario_del_turno" id="horario_del_turno" value="{{turno.horario_del_turno}}" min="08:00" max="17:00" step="900">
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </fieldset>
+</form>
+{% endblock %}

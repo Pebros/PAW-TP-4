@@ -60,6 +60,28 @@ class QueryBuilder
         }
     }
 
+    public function update($table, $parameters, $parametro, $valor)
+    {
+        //uso parametro y valor para el where
+        $parameters = $this->cleanParameterName($parameters);
+        $sql = sprintf(
+            'update into %s (%s) set (%s) where (%s)=(%s)',
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters)),
+            $parametro,
+            $valor
+        );
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parameters);
+        } catch (Exception $e) {
+            echo $sql;
+            $this->sendToLog($e);
+        }
+    }
+
+
     public function delete($table,$parametro,$valor){
 
         $sql=sprintf('delete from %s where (%s)=(%s)',
