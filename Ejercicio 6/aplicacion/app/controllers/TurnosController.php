@@ -29,7 +29,7 @@ class TurnosController extends Controller
         foreach ($turnos as $t) {
             if ($_GET['id'] == $t->id) {
                 $turno = $t;
-                $pathImage = $t->imagen_diagnostico . $t->tipoImagen;                
+                $pathImage = $t->imagen_diagnostico . $t->tipoImagen;
                 break;
             }
         }
@@ -38,15 +38,16 @@ class TurnosController extends Controller
 
     public function create()
     {
-        $today =  date("Y-m-d");
+        $today = date("Y-m-d");
         return view('turnos.create', compact('today'));
     }
 
-    public function delete(){
+    public function delete()
+    {
 
-        $parametro='id';
-        $valor=$_GET['id'];
-        $turno=$this->model->delete($parametro,$valor);
+        $parametro = 'id';
+        $valor = $_GET['id'];
+        $turno = $this->model->delete($parametro, $valor);
         return $this->index();
     }
 
@@ -60,15 +61,15 @@ class TurnosController extends Controller
                 break;
             }
         }
-        $today =  date("Y-m-d");
-        return view('turnos.update', compact('today','turno'));
+        $today = date("Y-m-d");
+        return view('turnos.update', compact('today', 'turno'));
     }
 
 
-    public function update(){
-        echo "llego aca";
-        $parametro='id';
-        $valor=$_POST['id'];
+    public function update()
+    {
+        $parametro = 'id';
+        $valor = $_POST['id'];
         $controles = [];
 
         if (!(isset($_POST['nombre_del_paciente']) &&
@@ -128,7 +129,7 @@ class TurnosController extends Controller
                 'fecha_del_turno' => $_POST["fecha_del_turno"],
                 'horario_del_turno' => $_POST["horario_del_turno"],
             );
-            $this->model->update($turno,$parametro,$valor);
+            $this->model->update($turno, $parametro, $valor);
             return redirect('turnos');
         } else {
             echo $controles;
@@ -234,7 +235,7 @@ class TurnosController extends Controller
                 'fecha_del_turno' => $_POST["fecha_del_turno"],
                 'horario_del_turno' => $_POST["horario_del_turno"],
                 'imagen_diagnostico' => $data,
-                'tipoImagen'=>$tipo
+                'tipoImagen' => $tipo
             );
             $this->model->insert($turno);
             return redirect('turnos');
