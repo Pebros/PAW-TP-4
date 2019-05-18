@@ -62,7 +62,7 @@ class TurnosController extends Controller
             }
         }
         $today = date("Y-m-d");
-        return view('turnos.update', compact('today', 'turno'));
+        return view('turnos.edit', compact('today', 'turno'));
     }
 
 
