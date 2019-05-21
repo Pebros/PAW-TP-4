@@ -11,7 +11,7 @@ CREATE TABLE `turnosej6` (
   `color_de_pelo` text,
   `fecha_del_turno` date,
   `horario_del_turno` text,
-  `imagen_diagnostico` longblob,
-  `tipoImagen` varchar(30) DEFAULT NULL,
+  `imagen_diagnostico` LONGTEXT,
+  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;

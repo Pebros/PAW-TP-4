@@ -177,39 +177,16 @@ class TurnosController extends Controller
             $this->hourIsBetween('08:00', '17:00', $_POST['horario_del_turno']))) {
             $controles[] = "ERROR CAMPO: HORARIO DEL TURNO";
         }
-        //dejo por defecto una para imagenes no encontradas
-        //$nombre_imagen = 'not_found.png';
-
-        //Se hace aca el control de la imagen porque puede ser opcional, por lo que no seria un error que no la cargue
-        $data;
-        $tipo;
+        
         if (!isset($_POST["imagen_diagnostico"])) {
-            // Verificamos si el tipo de archivo es un tipo de imagen permitido.
+           // Verificamos si el tipo de archivo es un tipo de imagen permitido.
             // y que el tamaño del archivo no exceda los MB
             $permitidos = array("image/jpg", "image/jpeg", "image/gif", "image/png");
             $limite_kb = 10000;
-
-            if (in_array($_FILES['imagen_diagnostico']['type'], $permitidos) && $_FILES['imagen_diagnostico']['size'] <= $limite_kb * 1024) {
-
-                // Archivo temporal
-                $imagen_temporal = $_FILES['imagen_diagnostico']['tmp_name'];
-
-                // Tipo de archivo
-                $tipo = $_FILES['imagen_diagnostico']['type'];
-
-                // Leemos el contenido del archivo temporal en binario.
-                $fp = fopen($imagen_temporal, 'r+b');
-                $data = fread($fp, filesize($imagen_temporal));
-                fclose($fp);
-
-                //Podríamos utilizar también la siguiente instrucción en lugar de las 3 anteriores.
-                // $data=file_get_contents($imagen_temporal);
-
-                // Escapamos los caracteres para que se puedan almacenar en la base de datos correctamente.
-                //$data = mysql_escape_string($data);
-
-                // Insertamos en la base de datos.
-
+            if (in_array($_FILES['imagen_diagnostico']['type'], $permitidos) && $_FILES['imagen_diagnostico']['size'] <= $limite_kb * 1024) {               
+                $imagen_temporal=base64_encode(file_get_contents($_FILES['imagen_diagnostico']['tmp_name']));                     
+                $tamaño=getimagesize($_FILES['imagen_diagnostico']['tmp_name']);
+                $tipo=$tamaño['mime'];
             } else {
                 $controles["typeErr"] = "La imagen no es del tipo  o excede el tamaño permitido";
             }
@@ -234,8 +211,7 @@ class TurnosController extends Controller
                 'color_de_pelo' => $_POST["color_de_pelo"],
                 'fecha_del_turno' => $_POST["fecha_del_turno"],
                 'horario_del_turno' => $_POST["horario_del_turno"],
-                'imagen_diagnostico' => $data,
-                'tipoImagen' => $tipo
+                'imagen_diagnostico' => 'data:image/'.$tipo.';base64,'.$imagen_temporal,
             );
             $this->model->insert($turno);
             return redirect('turnos');

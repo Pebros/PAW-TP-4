@@ -42,6 +42,6 @@
 	<dd>{{ turno.fecha_del_turno }} - {{turno.horario_del_turno }}</dd>
 
 	<dt><strong>Imagen diagnostico: </strong></dt>
-	<dd><img src="data:image/jpeg;base64,{{pathImage}}" alt="Imagen de diagnostico"/></dd>
+	<dd><img src="{{turno.imagen_diagnostico}}" alt="Imagen de diagnostico"/></dd>
 </dl>
 {% endblock %}

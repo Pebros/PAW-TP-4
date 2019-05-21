@@ -12,5 +12,5 @@ CREATE TABLE turnos (
     color_de_pelo TEXT,
     fecha_del_turno TIMESTAMP,
     horario_del_turno TEXT,
-    imagen_diagnostico TEXT
+    imagen_diagnostico LONGTEXT
 );
