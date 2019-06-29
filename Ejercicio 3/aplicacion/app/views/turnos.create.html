@@ -14,33 +14,37 @@
 {% block main %}
 <h2>Crear Turno</h2>
 
+<div>
+	{{ include('partials/errors.html') }}
+</div>
+
 <form autocomplete="off" action="/turnos/save" method="POST" enctype="multipart/form-data">
 	<fieldset>
 		<label for="nombre_del_paciente"> Nombre del Paciente: </label>
-		<input type="text" name="nombre_del_paciente" id="nombre_del_paciente" required="true">
+		<input type="text" name="nombre_del_paciente" id="nombre_del_paciente" required="true" value="{{ turno.nombre_del_paciente }}">
 		<label for="email">Email: </label>
-		<input type="email" name="email" id="email" required="true">
+		<input type="email" name="email" id="email" required="true" value="{{ turno.email }}">
 		<label for="telefono">Telefono: </label>
-		<input type="number" name="telefono" id="telefono" min="1" required="true">
+		<input type="number" name="telefono" id="telefono" min="1" required="true" value="{{ turno.telefono }}">
 		<label for="edad">Edad: </label>
-		<input type="number" name="edad" id="edad" min="0">
+		<input type="number" name="edad" id="edad" min="0" value="{{ turno.edad }}">
 		<label for="talla_de_calzado">Talla de calzado: </label>
-		<input type="number" name="talla_de_calzado" id="talla_de_calzado" min="20" max="45">
+		<input type="number" name="talla_de_calzado" id="talla_de_calzado" min="20" max="45" value="{{ turno.talla_de_calzado }}">
 		<label for="altura">Altura: </label>
-		<input type="range" name="altura"  id="altura" min="0" max="3.00" step="0.01">
+		<input type="range" name="altura"  id="altura" min="0" max="3.00" step="0.01" value="{{ turno.altura }}">
 		<label for="fecha_de_nacimiento">Fecha de nacimiento: </label>
-		<input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" max="{{ today }}" required="true">
-		<label for="color_de_pelo">Color de pelo: </label>
+		<input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" max="{{ today }}" required="true" value="{{ turno.fecha_de_nacimiento }}">
+		<label for="color_de_pelo" value="{{ turno.color_de_pelo }}">Color de pelo: </label>
 		<select name="color_de_pelo" id="color_de_pelo">
 		    <option>Claro</option>
 		    <option>Oscuro</option>
 		</select>
 		<label for="fecha_del_turno">Fecha del turno: </label>
-		<input type="date" name="fecha_del_turno" id="fecha_del_turno" min="{{ today }}" required="true">
+		<input type="date" name="fecha_del_turno" id="fecha_del_turno" min="{{ today }}" required="true" value="{{ turno.fecha_del_turno }}">
 		<label for="horario_del_turno">Horario del turno: </label>
-		<input type="time" name="horario_del_turno" id="horario_del_turno" min="08:00" max="17:00" step="900">
+		<input type="time" name="horario_del_turno" id="horario_del_turno" min="08:00" max="17:00" step="900" value="{{ turno.horario_del_turno }}">
 		<label for="imagen_diagnostico">Cargar diagnostico</label>
-		<input type="file" name="imagen_diagnostico" id="imagen_diagnostico" multiple='multiple' accept="image/gif , image/jpeg"/>
+		<input type="file" name="imagen_diagnostico" id="imagen_diagnostico" multiple='multiple' accept="image/gif , image/jpeg" value="{{ turno.imagen_diagnostico }}">
 		<br>
 		<input type="submit" value="Enviar">
 		<input type="reset" value="Limpiar">

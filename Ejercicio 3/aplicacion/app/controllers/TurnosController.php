@@ -18,6 +18,7 @@ class TurnosController extends Controller
     public function index()
     {
         $turnos = $this->model->get();
+
         return view('turnos', compact('turnos'));
     }
 
@@ -65,14 +66,29 @@ class TurnosController extends Controller
           $controles[] = "ERROR CAMPO: TELEFONO";
         }
 
-        if( !(isset($_POST['talla_de_calzado']) &&
-            is_numeric($_POST['talla_de_calzado']) &&
-            is_int((int)$_POST['talla_de_calzado'])&&
-            $this->in_range($_POST['talla_de_calzado'],19,46)))
+        if(!empty($_POST['edad']))
         {
-          $controles[] = "ERROR CAMPO: TALLA DE CALZADO";
+            if( !(is_numeric($_POST['edad'])) ||
+                !(is_int((int) $_POST['edad'])) ||
+                !($this->in_range($_POST['edad'],0,999)))
+            {
+              $controles[] = "ERROR CAMPO: EDAD";
+            }
+        }else{
+            $_POST['edad'] = "0";
         }
 
+        if(!empty($_POST['talla_de_calzado']))
+        {
+            if( !(is_numeric($_POST['talla_de_calzado'])) ||
+                !(is_int((int) $_POST['talla_de_calzado'])) ||
+                !($this->in_range($_POST['talla_de_calzado'],19,46)))
+            {
+              $controles[] = "ERROR CAMPO: TALLA DE CALZADO";
+            }
+        }else{
+            $_POST['talla_de_calzado'] = "0";
+        }
 
         if( !(isset($_POST['fecha_de_nacimiento']) &&
             $this->validar_fecha($_POST["fecha_de_nacimiento"])))
@@ -86,11 +102,15 @@ class TurnosController extends Controller
           $controles[] = "ERROR CAMPO: FECHA DEL TURNO";
         }
 
-        if( !(isset($_POST['horario_del_turno']) &&
-            $this->hourIsBetween('08:00','17:00', $_POST['horario_del_turno'])))
-        {
-          $controles[] = "ERROR CAMPO: HORARIO DEL TURNO";
+        if( !empty($_POST['horario_del_turno'])){
+            if( !$this->hourIsBetween('08:00','17:00', $_POST['horario_del_turno']))
+            {
+              $controles[] = "ERROR CAMPO: HORARIO DEL TURNO";
+            }
+        }else{
+            $_POST['horario_del_turno'] = "00:00";
         }
+
         //dejo por defecto una para imagenes no encontradas
         $nombre_imagen = 'not_found.png';
 
@@ -129,10 +149,21 @@ class TurnosController extends Controller
                 'fecha_del_turno' => $_POST["fecha_del_turno"],
                 'horario_del_turno' => $_POST["horario_del_turno"],
                 'imagen_diagnostico' => $nombre_imagen);
+
             $this->model->insert($turno);
             return redirect('turnos');
         }else{
-            echo("TODO MAL");
+            $turno = array('nombre_del_paciente' => $_POST["nombre_del_paciente"],
+                'email'=> $_POST["email"],
+                'telefono' => $_POST["telefono"],
+                'edad' => $_POST["edad"],
+                'talla_de_calzado' => $_POST["talla_de_calzado"],
+                'altura' => $_POST["altura"],
+                'fecha_de_nacimiento' => $_POST["fecha_de_nacimiento"],
+                'color_de_pelo' => $_POST["color_de_pelo"],
+                'fecha_del_turno' => $_POST["fecha_del_turno"],
+                'horario_del_turno' => $_POST["horario_del_turno"]);
+            return view('turnos.create', compact('controles','turno'));
         }
     }
 
