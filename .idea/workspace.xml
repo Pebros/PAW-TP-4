@@ -1,66 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20356223-c1d1-450d-94c8-ca10f625ea9f" name="Default Changelist" comment="" />
+    <list default="true" id="20356223-c1d1-450d-94c8-ca10f625ea9f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 4/aplicacion/logs/mvc.log" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 4/aplicacion/logs/mvc.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 4/aplicacion/sql/0002_create_table_turnos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 4/aplicacion/sql/0002_create_table_turnos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 4/aplicacion/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 4/aplicacion/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 4/aplicacion/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 4/aplicacion/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/controllers/TurnosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/controllers/TurnosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/models/Turnos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/models/Turnos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio 6/aplicacion/core/database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio 6/aplicacion/core/database/QueryBuilder.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/core/App.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/core/database/QueryBuilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/controllers/TurnosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="-60">
+              <caret line="149" column="51" selection-start-line="149" selection-start-column="41" selection-end-line="149" selection-end-column="51" />
+              <folding>
+                <element signature="e#35#59#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/models/Turnos.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/app/controllers/TurnosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="1359">
+              <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>id</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,9 +61,11 @@
       <list>
         <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/routes.php" />
         <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.html" />
-        <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/controllers/TurnosController.php" />
         <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/models/Turnos.php" />
         <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/core/database/QueryBuilder.php" />
+        <option value="$PROJECT_DIR$/Ejercicio 4/aplicacion/sql/0002_create_table_turnos.sql" />
+        <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/controllers/TurnosController.php" />
+        <option value="$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.edit.html" />
       </list>
     </option>
   </component>
@@ -90,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,53 +93,48 @@
             <path>
               <item name="PAW-TP-4" type="b2602c69:ProjectViewProjectNode" />
               <item name="PAW-TP-4" type="462c0819:PsiDirectoryNode" />
-              <item name="Ejercicio 6" type="462c0819:PsiDirectoryNode" />
+              <item name="Ejercicio 4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PAW-TP-4" type="b2602c69:ProjectViewProjectNode" />
               <item name="PAW-TP-4" type="462c0819:PsiDirectoryNode" />
-              <item name="Ejercicio 6" type="462c0819:PsiDirectoryNode" />
+              <item name="Ejercicio 4" type="462c0819:PsiDirectoryNode" />
               <item name="aplicacion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PAW-TP-4" type="b2602c69:ProjectViewProjectNode" />
               <item name="PAW-TP-4" type="462c0819:PsiDirectoryNode" />
-              <item name="Ejercicio 6" type="462c0819:PsiDirectoryNode" />
-              <item name="aplicacion" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PAW-TP-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PAW-TP-4" type="462c0819:PsiDirectoryNode" />
-              <item name="Ejercicio 6" type="462c0819:PsiDirectoryNode" />
+              <item name="Ejercicio 4" type="462c0819:PsiDirectoryNode" />
               <item name="aplicacion" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PAW-TP-4" type="b2602c69:ProjectViewProjectNode" />
               <item name="PAW-TP-4" type="462c0819:PsiDirectoryNode" />
-              <item name="Ejercicio 6" type="462c0819:PsiDirectoryNode" />
+              <item name="Ejercicio 4" type="462c0819:PsiDirectoryNode" />
               <item name="aplicacion" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PAW-TP-4" type="b2602c69:ProjectViewProjectNode" />
               <item name="PAW-TP-4" type="462c0819:PsiDirectoryNode" />
               <item name="Ejercicio 6" type="462c0819:PsiDirectoryNode" />
-              <item name="aplicacion" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -176,17 +163,18 @@
       <workItem from="1558130904367" duration="88000" />
       <workItem from="1558131611419" duration="30000" />
       <workItem from="1558131769566" duration="2726000" />
+      <workItem from="1561924503205" duration="1348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2844000" />
+    <option name="totallyTimeSpent" value="7704000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1365" y="0" width="1922" height="1081" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18443497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1905016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -199,7 +187,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.21991247" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21930745" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -221,31 +209,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/app/controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/app/controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/core/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/core/database/QueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/models/Turnos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/core/database/QueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/app/models/Turnos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/logs/mvc.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="312" column="61" selection-start-line="312" selection-start-column="61" selection-end-line="312" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/sql/0001_create_database.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/sql/0002_create_table_turnos.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/sql/scriptDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="63" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/views/turnos.edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/app/controllers/TurnosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="-60">
+          <caret line="149" column="51" selection-start-line="149" selection-start-column="41" selection-end-line="149" selection-end-column="51" />
+          <folding>
+            <element signature="e#35#59#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ejercicio 6/aplicacion/core/database/QueryBuilder.php">
+    <entry file="file://$PROJECT_DIR$/Ejercicio 4/aplicacion/app/controllers/TurnosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="1359">
+          <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
         </state>
       </provider>
     </entry>

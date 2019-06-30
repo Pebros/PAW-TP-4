@@ -55,7 +55,10 @@ class QueryBuilder
         try {
             $statement = $this->pdo->prepare($sql);
             $statement->execute($parameters);
+            echo $statement;
+
         } catch (Exception $e) {
+            echo $e;
             $this->sendToLog($e);
         }
     }

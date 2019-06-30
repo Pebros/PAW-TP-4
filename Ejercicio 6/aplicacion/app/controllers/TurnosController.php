@@ -111,6 +111,22 @@ class TurnosController extends Controller
         }
 
 
+        if (!isset($_POST["imagen_diagnostico"])) {
+            // Verificamos si el tipo de archivo es un tipo de imagen permitido.
+            // y que el tamaño del archivo no exceda los MB
+            $permitidos = array("image/jpg", "image/jpeg", "image/gif", "image/png");
+            $limite_kb = 10000;
+            if (in_array($_FILES['imagen_diagnostico']['type'], $permitidos) && $_FILES['imagen_diagnostico']['size'] <= $limite_kb * 1024) {
+                $imagen_temporal=base64_encode(file_get_contents($_FILES['imagen_diagnostico']['tmp_name']));
+                $tamaño=getimagesize($_FILES['imagen_diagnostico']['tmp_name']);
+                $tipo=$tamaño['mime'];
+            } else {
+                $controles["typeErr"] = "La imagen no es del tipo  o excede el tamaño permitido";
+            }
+        } else {
+            $controles["imageErr"] = "Ocurrió un error al cargar la imagen";
+        }
+
         if (empty($controles)) {
             $turnos = $this->model->get();
             $contador = 1;
@@ -128,6 +144,8 @@ class TurnosController extends Controller
                 'color_de_pelo' => $_POST["color_de_pelo"],
                 'fecha_del_turno' => $_POST["fecha_del_turno"],
                 'horario_del_turno' => $_POST["horario_del_turno"],
+                'imagen_diagnostico' => 'data:image/'.$tipo.';base64,'.$imagen_temporal,
+
             );
             $this->model->update($turno, $parametro, $valor);
             return $this->index();

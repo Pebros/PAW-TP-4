@@ -6,7 +6,7 @@ use App\Core\Model;
 
 class Turnos extends Model
 {
-    protected $table = 'turnosej6';
+    protected $table = 'turnos';
 
     public function get()
     {
@@ -15,6 +15,7 @@ class Turnos extends Model
 
     public function insert(array $task)
     {
+
         $this->db->insert($this->table, $task);
     }
 
